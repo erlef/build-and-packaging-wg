@@ -1,0 +1,27 @@
+# Created by Onorio Catenacci
+# 20 April 2022
+# This is a workflow to create and publish Chocolately NuGet Packages for Elixir, Erlang and Rebar3
+
+
+name: Create CNG Packages
+
+on: 
+  release:
+    types: [published]
+
+jobs:
+  create_elixir_release:
+    runs-on: windows-latest
+    steps:
+      # We need curl to fetch the precompiled.zip file.
+      choco install curl
+      curl -O https://github.com/elixir-lang/elixir/releases/download/v1.13.4/Precompiled.zip
+
+
+  create_erlang_release:
+    runs-on: windows-latest
+  
+  create_rebar3_relase:
+    runs-on: windows-latest
+
+

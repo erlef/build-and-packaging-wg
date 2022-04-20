@@ -1,0 +1,4 @@
+{
+   "name": "Create CNG Packages",
+   "description": "This workflow will create and deploy various Chocolatey NuGet Packages for Erlang/Elixir artifacts"
+}
